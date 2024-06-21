@@ -6,7 +6,7 @@ RUN npm install
 COPY . .
 
 # Stage 2: Production
-FROM node:14-alpine AS production
+FROM node:18-alpine AS production
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app .
 EXPOSE 3000
